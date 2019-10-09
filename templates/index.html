@@ -11,6 +11,7 @@
         <h4>
             RGBurn! poooooooooooop
         </h4>
+    <!--------- show alll insults at once end ---------
     <h2>{{ theme.options.main.header_image.alt_text }}</h2>
     <img src="{{ theme.options.main.header_image.url }}" />
     {% for insults in boxes.insults.all %}
@@ -18,6 +19,10 @@
             <h1>{{ insults.name }}</h1>
         </div>
     {% endfor %}
+    --------- show alll insults at once end --------->
+    {% set insult = boxes.insults.all|random %}
+
+    {{ insult.name }}
 
         <em>A Theme by: {{ theme.config.theme.name }}</em>
     </body>
