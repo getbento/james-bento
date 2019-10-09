@@ -10,6 +10,13 @@
         </style>
     </head>
     <body>
+
+        <nav>
+            {% for item in navs.main %}
+                <a href="{{ item.url }}">{{ item.name }}</a><br>
+            {% end for %}
+        </nav>
+
     {% block body %}
 
         <h4>
