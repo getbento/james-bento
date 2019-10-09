@@ -1,4 +1,6 @@
 <html>
+        {% set insult = boxes.insults.all|random %}
+
     <head>
         <title>{{ account.name }}</title>
         <style>
@@ -8,7 +10,7 @@
         </style>
     </head>
     <body>
-        background-color: {{ insults.fields.background_color}}
+        background-color: {{ insult.fields.background_color }}
         <h4>
             RGBurn! poooooooooooop
         </h4>
@@ -21,7 +23,6 @@
         </div>
     {% endfor %}
     --------- show alll insults at once end --------->
-    {% set insult = boxes.insults.all|random %}
 
     {{ insult.name }}
 
